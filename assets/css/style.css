@@ -847,9 +847,6 @@ a:hover {
   top: 12px;
 }
 
-p.indent {
-  text-indent: 30px;
-}
 
 /*--/ Portfolio /--*/
 /*--/ Portfolio /--*/
@@ -977,19 +974,19 @@ p.indent {
 /*--/ Footer /--*/
 /*--/ Footer /--*/
 
-footer {
+.footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
   background: #1A3E40;
 }
-footer .copyright {
+.footer .copyright {
   margin-bottom: 0.3rem;
 }
-footer .credits {
+.footer .credits {
   margin-bottom: 0;
 }
-footer .credits a {
+.footer .credits a {
   color: #fff;
 }
 
