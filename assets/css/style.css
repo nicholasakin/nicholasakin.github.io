@@ -705,7 +705,8 @@ a:hover {
   height: 100vh;
   position: relative;
   color: #fff;
-  background-image: url('../img/placeholder.jpg')
+  background-image: url('../img/placeholder.jpg');
+
 }
 
 
@@ -735,13 +736,15 @@ a:hover {
 }
 .hero .hero-subtitle {
   font-size: 1.5rem;
-  font-weight: 600;
-  color: white
+  font-weight: 400;
+  color: white;
+  text-align: left;
+  position: absolute;
+  margin-left: 11em;
 }
-
-
-.hero:after {
-  background-color: rgba(0,0,0,0.25);
+/* adds darkness to hero cover */
+.hero::before {
+  background-color: rgba(0,0,0,0.5);
   content: "";
   background-size: cover;
   position: absolute;
@@ -749,9 +752,18 @@ a:hover {
   right: 0px;
   bottom: 0px;
   left: 0px;
-  opacity: 0.75;
+  opacity: 0.5;
 }
 
+.fade-in {
+  animation: fadeIn 3s;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  25% { opacity: 0; }
+  100% { opacity: 1; }
+}
 
 @media (min-width: 768px) {
   .hero .hero-subtitle {
@@ -773,7 +785,11 @@ a:hover {
   font-size: 3rem;
 }
 
-
+#hero p span {
+  color: #fff;
+  padding-bottom: 2px;
+  letter-spacing: 1px;
+  border-bottom: 3px solid #149ddd;
 
 
 @media (min-width: 768px) {
