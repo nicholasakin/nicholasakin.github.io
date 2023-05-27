@@ -222,9 +222,9 @@ a:hover {
   opacity: 1;
 }
 
-/*--/ Prelaoder /--*/
-/*--/ Prelaoder /--*/
-/*--/ Prelaoder /--*/
+/*--/ Preloader /--*/
+/*--/ Preloader /--*/
+/*--/ Preloader /--*/
 
 #preloader {
   position: fixed;
@@ -723,7 +723,7 @@ a:hover {
   color: #fff;
   padding-bottom: 2px;
   letter-spacing: 1px;
-  border-bottom: 3px solid #149ddd;
+  border-bottom: 3px solid #6CADB0;
 }
 
 @media (min-width: 768px) {
@@ -744,7 +744,7 @@ section {
 }
 
 .section-bg {
-  background: #ebf2ff;
+  background: #eef2f2;
 }
 
 .section-title {
@@ -757,7 +757,7 @@ section {
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
-  color: #173b6c;
+  color: #132624;
 }
 
 .section-title h2::after {
@@ -766,7 +766,7 @@ section {
   display: block;
   width: 50px;
   height: 3px;
-  background: #149ddd;
+  background: #6CADB0;
   bottom: 0;
   left: 0;
 }
@@ -774,6 +774,7 @@ section {
 .section-title p {
   margin-bottom: 0;
 }
+
 
 
 /*--------------------------------------------------------------
@@ -805,7 +806,7 @@ section {
 .about .content ul i {
   font-size: 20px;
   padding-right: 4px;
-  color: #5846f9;
+  color: #6cadb0;
 }
 
 .about .content p:last-child {
@@ -835,6 +836,7 @@ section {
   position: absolute;
   right: 20px;
   top: 12px;
+  text-decoration: #6cadb0;
 }
 
 .about a {
@@ -859,7 +861,6 @@ section {
 }
 
 
-
 /*--------------------------------------------------------------
 # Resume
 --------------------------------------------------------------*/
@@ -876,7 +877,7 @@ section {
 .resume .resume-item {
   padding: 0 0 20px 20px;
   margin-top: -2px;
-  border-left: 2px solid #1f5297;
+  border-left: 2px solid #6CADB0;
   position: relative;
 }
 
@@ -920,7 +921,7 @@ section {
   left: -9px;
   top: 0;
   background: #fff;
-  border: 2px solid #1f5297;
+  border: 2px solid #6CADB0;
 }
 
 
@@ -939,7 +940,7 @@ section {
   margin: 0 auto 35px auto;
   list-style: none;
   text-align: center;
-  background: #ebf2ff;
+  background: #eef2f2;
   border-radius: 50px;
   padding: 2px 15px;
 }
@@ -951,14 +952,14 @@ section {
   font-weight: 600;
   line-height: 1;
   text-transform: uppercase;
-  color: #272829;
+  color: #132624;
   margin-bottom: 5px;
   transition: all 0.3s ease-in-out;
 }
 
 .portfolio #portfolio-flters li:hover,
 .portfolio #portfolio-flters li.filter-active {
-  color: #149ddd;
+  color: #6CADB0;
 }
 
 .portfolio #portfolio-flters li:last-child {
@@ -967,6 +968,14 @@ section {
 
 .portfolio .portfolio-item {
   margin-bottom: 30px;
+  width: 20rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .item {
@@ -978,17 +987,6 @@ section {
   border-radius: 10px;
 }
 
-.item:hover {
-  box-shadow: 5px 10px 20px rgba(20, 157, 221, 1);
-}
-
-.item h3 {
-  margin: 0;
-  display: block;
-  background-color: rgba(20, 157, 221, 1);
-  padding: 1rem;
-}
-
 .item a {
   position: absolute;
   top: 0;
@@ -998,18 +996,21 @@ section {
   z-index: 1;
 }
 
-.item a:hover,
-.item a:focus {
-  ~ .item-overlay {
-    transform: translate3d(0, 0, 0);
-  }
+.item-title {
+  text-align: center;
+  height: 60px;
+  font-weight: 530;
+  font-family: 'Mukta', sans-serif;
+  font-size: 20px;
+  margin: 0;
+  display: block;
+  background-color: #eef2f2;
+  padding: 1rem;
 }
 
-img {
-  width: 100%;
-  height: 100%;
-  display: block;
-  object-fit: cover;
+.item:hover .item-title {
+  background-color: #6cadb0;
+  color: #eef2f2;
 }
 
 .item-overlay {
@@ -1020,25 +1021,32 @@ img {
   position: absolute;
   width: 100%;
   top: 0;
-  transition: transform 0.5s;
+  transition: transform 0.75s;
   transform: translate3d(0, calc(100% - 3.5rem), 0);
-  background: rgba(20, 157, 221, 0.95);
+  background: #eff2f2e0;
   overflow: hidden;
 }
 
-.item-title {
-  text-align: center;
-  height: 60px;
-  font-weight: 530;
-  font-family: 'Mukta', sans-serif;
-  font-size: 25px;
+.item:hover .item-overlay {
+  transform: translate3d(0,0,0);
+}
+.item:active .item-overlay {
+  transform: translate3d(0,0,0);
+  
+}
+
+.item:hover .item-title {
+  background-color: #6cadb0;
+  color: #eef2f2;
 }
 
 .item-body {
   flex-grow: 1;
-  padding: 1rem;
+  padding: 1rem; 
   max-height: 100%;
   overflow: auto; 
+  width: 100%;
+
 }
 
 .item-body p {
@@ -1046,7 +1054,7 @@ img {
 }
 
 .item-description {
-  overflow: auto; 
+  margin: 0;
 }
 
 .item-footer-lab {
@@ -1075,7 +1083,7 @@ img {
 
 .contact .info i {
   font-size: 20px;
-  color: #149ddd;
+  color: #6CADB0;
   float: left;
   width: 44px;
   height: 44px;
@@ -1091,7 +1099,7 @@ img {
 .contact h3 {
   font-weight: 700;
   font-size: 46px;
-  color: #173b6c;
+  color: #132624;
   justify-content: center;
   text-align: center;
   margin-top: 30%
@@ -1111,7 +1119,7 @@ img {
   padding: 0 0 10px 60px;
   margin-bottom: 20px;
   font-size: 14px;
-  color: #173b6c;
+  color: #132624;
 }
 
 .contact .info .email p {
@@ -1138,14 +1146,14 @@ img {
 }
 
 .contact .info .social-links a:hover {
-  background: #149ddd;
+  background: #6CADB0;
   color: #fff;
 }
 
 .contact .info .email:hover i,
 .contact .info .address:hover i,
 .contact .info .phone:hover i {
-  background: #149ddd;
+  background: #6CADB0;
   color: #fff;
 }
 
@@ -1232,7 +1240,7 @@ img {
 }
 
 .contact #php-email-form button[type=submit] {
-  background: #149ddd;
+  background: #6CADB0;
   border: 0;
   padding: 10px 24px;
   color: #fff;
